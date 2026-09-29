@@ -1,0 +1,142 @@
+
+:root{
+  --bg:#f6f3ee;
+  --paper:#fffdf9;
+  --ink:#1f1d1a;
+  --muted:#6f6a63;
+  --line:#ddd6cc;
+  --accent:#22201d;
+  --radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+a{color:inherit;text-decoration:none}
+.site-header{
+  position:sticky; top:0; z-index:20;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:18px clamp(20px,5vw,72px);
+  background:rgba(246,243,238,.86);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(31,29,26,.07);
+}
+.brand{font-weight:800;letter-spacing:.02em}
+nav{display:flex;gap:20px;font-size:14px;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+main{overflow:hidden}
+.hero{
+  min-height:72vh;
+  display:grid; place-items:center;
+  padding:64px 20px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,.95), transparent 34%),
+    radial-gradient(circle at 85% 30%, rgba(227,215,198,.8), transparent 30%),
+    linear-gradient(135deg,#f4efe8,#e9e1d7);
+}
+.hero-card{
+  width:min(980px,100%);
+  padding:clamp(32px,6vw,84px);
+  border:1px solid rgba(255,255,255,.75);
+  border-radius:34px;
+  background:rgba(255,255,255,.52);
+  box-shadow:0 30px 70px rgba(72,57,39,.09);
+}
+.eyebrow{
+  margin:0 0 14px;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.22em;
+  color:#81786c;
+}
+h1{
+  margin:0;
+  font-size:clamp(42px,7vw,88px);
+  line-height:1.03;
+  letter-spacing:-.055em;
+}
+.hero-copy{
+  max-width:620px;
+  margin:28px 0;
+  color:var(--muted);
+  font-size:18px;
+  line-height:1.8;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:13px 20px;border-radius:999px;border:1px solid var(--ink);
+  font-weight:700;font-size:14px;
+}
+.btn.primary{background:var(--ink);color:white}
+.btn.ghost{background:transparent}
+.section{
+  width:min(1180px,calc(100% - 40px));
+  margin:auto;
+  padding:92px 0;
+}
+.section.alt{
+  width:100%;
+  padding:92px max(20px,calc((100vw - 1180px)/2));
+  background:#ebe5dd;
+}
+.section-head{
+  display:flex;justify-content:space-between;gap:30px;align-items:end;
+  margin-bottom:32px;
+}
+.section-head h2,.about-card h2{margin:0;font-size:clamp(34px,5vw,58px);letter-spacing:-.04em}
+.section-head>p{max-width:430px;color:var(--muted);line-height:1.7}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.photo-card{
+  margin:0;
+  overflow:hidden;
+  border-radius:var(--radius);
+  background:var(--paper);
+  border:1px solid rgba(31,29,26,.08);
+}
+.placeholder{
+  aspect-ratio:4/5;
+  display:grid;place-items:center;
+  font-weight:700;
+  color:rgba(31,29,26,.58);
+}
+.gradient-a .placeholder{background:linear-gradient(150deg,#efe7dd,#c9d7d8)}
+.gradient-b .placeholder{background:linear-gradient(150deg,#d9d1cb,#e6c8b4)}
+.gradient-c .placeholder{background:linear-gradient(150deg,#c9d3be,#ece4d7)}
+figcaption{padding:16px 18px 20px;color:var(--muted);font-size:14px}
+.journal-card{
+  background:var(--paper);
+  border-radius:var(--radius);
+  padding:clamp(24px,4vw,46px);
+  margin-bottom:18px;
+  border:1px solid rgba(31,29,26,.08);
+}
+.journal-card.muted{background:rgba(255,255,255,.45)}
+.date{font-size:13px;letter-spacing:.13em;color:#867f77;margin-bottom:18px}
+.journal-card h3{margin:0 0 16px;font-size:clamp(26px,4vw,42px);letter-spacing:-.025em}
+.journal-card p{max-width:760px;color:var(--muted);font-size:17px;line-height:1.9}
+.note{font-size:14px!important}
+.about-card{
+  display:grid;grid-template-columns:1fr 1fr;gap:44px;
+  padding:clamp(28px,5vw,56px);
+  background:#20201d;color:#faf8f4;border-radius:30px;
+}
+.about-card p:last-child{color:#c8c2b8;line-height:1.9;font-size:17px}
+footer{
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  padding:30px clamp(20px,5vw,72px) 44px;
+  color:#8b847b;font-size:13px;
+}
+@media (max-width:760px){
+  nav{gap:12px;font-size:13px}
+  .section-head{display:block}
+  .gallery-grid{grid-template-columns:1fr}
+  .about-card{grid-template-columns:1fr}
+  .hero{min-height:64vh}
+}
