@@ -3,30 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f3eee7" />
   <title>我的小世界</title>
   <meta name="description" content="图片、作品、日记与生活记录。" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#home">我的小世界</a>
-    <nav><a href="#home">首页</a><a href="#gallery">图片与作品</a><a href="#journal">日记</a><a href="#about">关于</a></nav>
+    <a class="brand" href="#home">
+      <span class="brand-mark">✦</span>
+      <span>我的小世界</span>
+    </a>
+    <nav>
+      <a href="#home">首页</a>
+      <a href="#gallery">图片与作品</a>
+      <a href="#journal">日记</a>
+      <a href="#about">关于</a>
+    </nav>
   </header>
+
   <main>
-    <section id="home" class="hero"><div class="hero-grid"><div class="hero-copybox"><p class="eyebrow">MY LITTLE WORLD</p><h1>把喜欢的画面，<br>留在这里。</h1><p class="hero-copy">照片、AI 作品、生活片段、日记，以及以后舍不得忘记的小事，都可以慢慢收进这个网站。</p><div class="hero-actions"><a class="btn primary" href="#gallery">看我的图片与作品</a><a class="btn ghost" href="#journal">读日记</a></div></div><figure class="hero-photo"><img src="cherry-blossom.jpeg" alt="温馨作品展示"></figure></div></section>
-    <section id="gallery" class="section"><div class="section-head"><div><p class="eyebrow">IMAGES & WORKS</p><h2>我的图片与作品</h2></div><p>这里收藏我喜欢的图片、AI 创作、生活画面和以后做出来的各种作品。</p></div><div class="gallery-grid">
-      <figure class="photo-card"><img src="sunny-village.jpeg" alt="阳光小路"><figcaption>阳光小路</figcaption></figure>
-      <figure class="photo-card"><img src="pink-room.jpeg" alt="粉色房间"><figcaption>粉色房间</figcaption></figure>
-      <figure class="photo-card"><img src="beach-day.jpeg" alt="海边的一天"><figcaption>海边的一天</figcaption></figure>
-      <figure class="photo-card"><img src="cozy-bed.jpeg" alt="暖暖的睡前时光"><figcaption>暖暖的睡前时光</figcaption></figure>
-      <figure class="photo-card"><img src="blue-night.jpeg" alt="蓝色的夜"><figcaption>蓝色的夜</figcaption></figure>
-      <figure class="photo-card"><img src="cherry-blossom.jpeg" alt="樱花树下"><figcaption>樱花树下</figcaption></figure>
-      <figure class="photo-card wide"><img src="fantasy-friends.jpeg" alt="梦幻伙伴"><figcaption>梦幻伙伴</figcaption></figure>
-    </div></section>
-    <section id="journal" class="section alt"><div class="section-head"><div><p class="eyebrow">JOURNAL</p><h2>生活日记</h2></div><p>记录那些以后一定会想起来的小瞬间。</p></div><article class="journal-card"><div class="date">2026 · 09 · 28</div><h3>今天，她第一次说：“我不要！”</h3><p>今天突然听到这句话的时候，我才发现很多看起来很普通的瞬间，其实都是成长留下来的小小里程碑。</p></article></section>
-    <section id="about" class="section"><div class="about-card"><div><p class="eyebrow">ABOUT</p><h2>关于这个网站</h2></div><p>这是属于我的数字空间。图片、作品、日记、生活和回忆，都可以慢慢留在这里。</p></div></section>
+    <section id="home" class="hero">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+      <div class="hero-grid">
+        <div class="hero-copybox">
+          <p class="eyebrow">MY LITTLE WORLD · SINCE 2026</p>
+          <h1>把喜欢的画面，<br><em>留在这里。</em></h1>
+          <p class="hero-copy">照片、AI 作品、生活片段、日记，以及以后舍不得忘记的小事，都可以慢慢收进这个网站。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#gallery">看看我的作品 <span>→</span></a>
+            <a class="btn ghost" href="#journal">读一篇日记</a>
+          </div>
+          <div class="hero-note">
+            <span class="hero-note-dot"></span>
+            <span>一个慢慢长大的私人数字空间</span>
+          </div>
+        </div>
+
+        <div class="hero-collage" aria-label="作品预览">
+          <figure class="collage-card card-main"><img src="cherry-blossom.jpeg" alt="樱花树下"></figure>
+          <figure class="collage-card card-small card-top"><img src="blue-night.jpeg" alt="蓝色的夜"></figure>
+          <figure class="collage-card card-small card-bottom"><img src="sunny-village.jpeg" alt="阳光小路"></figure>
+          <span class="collage-sticker">memories<br>live here ♡</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="section-number">01</div>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">IMAGES & WORKS</p>
+          <h2>我的图片与作品</h2>
+        </div>
+        <p>这里收藏我喜欢的图片、AI 创作、生活画面和以后做出来的各种作品。点击任意图片，可以单独查看。</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure class="photo-card tall"><div class="image-wrap"><img src="sunny-village.jpeg" alt="阳光小路"></div><figcaption><span>阳光小路</span><small>01</small></figcaption></figure>
+        <figure class="photo-card"><div class="image-wrap"><img src="pink-room.jpeg" alt="粉色房间"></div><figcaption><span>粉色房间</span><small>02</small></figcaption></figure>
+        <figure class="photo-card"><div class="image-wrap"><img src="beach-day.jpeg" alt="海边的一天"></div><figcaption><span>海边的一天</span><small>03</small></figcaption></figure>
+        <figure class="photo-card"><div class="image-wrap"><img src="cozy-bed.jpeg" alt="暖暖的睡前时光"></div><figcaption><span>暖暖的睡前时光</span><small>04</small></figcaption></figure>
+        <figure class="photo-card"><div class="image-wrap"><img src="blue-night.jpeg" alt="蓝色的夜"></div><figcaption><span>蓝色的夜</span><small>05</small></figcaption></figure>
+        <figure class="photo-card"><div class="image-wrap"><img src="cherry-blossom.jpeg" alt="樱花树下"></div><figcaption><span>樱花树下</span><small>06</small></figcaption></figure>
+        <figure class="photo-card wide"><div class="image-wrap"><img src="fantasy-friends.jpeg" alt="梦幻伙伴"></div><figcaption><span>梦幻伙伴</span><small>07</small></figcaption></figure>
+      </div>
+    </section>
+
+    <section id="journal" class="journal-section">
+      <div class="section inner">
+        <div class="section-number light">02</div>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">JOURNAL</p>
+            <h2>生活日记</h2>
+          </div>
+          <p>很多重要的事，当下看起来其实都很普通。把它写下来，几年后再看就不一样了。</p>
+        </div>
+
+        <article class="journal-card">
+          <div class="journal-date">
+            <span>SEP</span>
+            <strong>28</strong>
+            <span>2026</span>
+          </div>
+          <div class="journal-content">
+            <p class="journal-kicker">A LITTLE MILESTONE</p>
+            <h3>今天，她第一次说：“我不要！”</h3>
+            <p>今天突然听到这句话的时候，我才发现很多看起来很普通的瞬间，其实都是成长留下来的小小里程碑。</p>
+            <div class="journal-sign">— 记住今天</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="section-number">03</div>
+      <div class="about-card">
+        <div>
+          <p class="eyebrow">ABOUT THIS PLACE</p>
+          <h2>不需要完美，<br>只需要真实地留下来。</h2>
+        </div>
+        <div class="about-copy">
+          <p>这是属于我的数字空间。图片、作品、日记、生活和回忆，都可以慢慢留在这里。</p>
+          <p class="quote">“以后回头看，希望能记得当时的自己，也记得那些陪在身边的人。”</p>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer><span>© <span id="year"></span> 我的小世界</span><span>Made for memories.</span></footer>
+
+  <footer>
+    <div class="footer-brand"><span>✦</span> 我的小世界</div>
+    <span>© <span id="year"></span> · Made for memories.</span>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
