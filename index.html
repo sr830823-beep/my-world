@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>我的小世界</title>
-  <meta name="description" content="照片、日记、作品与生活记录。" />
+  <meta name="description" content="图片、作品、日记与生活记录。" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
     <a class="brand" href="#home">我的小世界</a>
     <nav>
       <a href="#home">首页</a>
-      <a href="#gallery">图片</a>
+      <a href="#gallery">图片与作品</a>
       <a href="#journal">日记</a>
       <a href="#about">关于</a>
     </nav>
@@ -20,39 +20,39 @@
 
   <main>
     <section id="home" class="hero">
-      <div class="hero-card">
-        <p class="eyebrow">MY LITTLE WORLD</p>
-        <h1>把喜欢的图片、生活和回忆，<br>慢慢放在这里。</h1>
-        <p class="hero-copy">这不是一个“必须完美”的网站。它会跟着你的生活一起成长。</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#journal">读最新日记</a>
-          <a class="btn ghost" href="#gallery">看图片</a>
+      <div class="hero-grid">
+        <div class="hero-copybox">
+          <p class="eyebrow">MY LITTLE WORLD</p>
+          <h1>把喜欢的画面，<br>留在这里。</h1>
+          <p class="hero-copy">照片、AI 作品、生活片段、日记，以及以后舍不得忘记的小事，都可以慢慢收进这个网站。</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#gallery">看我的图片与作品</a>
+            <a class="btn ghost" href="#journal">读日记</a>
+          </div>
         </div>
+        <figure class="hero-photo">
+          <img src="images/cherry-blossom.jpeg" alt="温馨作品展示">
+        </figure>
       </div>
     </section>
 
     <section id="gallery" class="section">
       <div class="section-head">
         <div>
-          <p class="eyebrow">GALLERY</p>
-          <h2>图片与作品</h2>
+          <p class="eyebrow">IMAGES & WORKS</p>
+          <h2>我的图片与作品</h2>
         </div>
-        <p>以后把你的照片、AI 图片、旅行记录都放进来。</p>
+        <p>这里收藏我喜欢的图片、AI 创作、生活画面和以后做出来的各种作品。</p>
       </div>
 
       <div class="gallery-grid">
-        <figure class="photo-card gradient-a">
-          <div class="placeholder">你的图片 01</div>
-          <figcaption>作品 / 生活 / 随手拍</figcaption>
-        </figure>
-        <figure class="photo-card gradient-b">
-          <div class="placeholder">你的图片 02</div>
-          <figcaption>给每张图片留下一句话</figcaption>
-        </figure>
-        <figure class="photo-card gradient-c">
-          <div class="placeholder">你的图片 03</div>
-          <figcaption>以后可以一直往下加</figcaption>
-        </figure>
+        <figure class="photo-card"><img src="images/sunny-village.jpeg" alt="阳光小路"><figcaption>阳光小路</figcaption></figure>
+        <figure class="photo-card"><img src="images/pink-room.jpeg" alt="粉色房间"><figcaption>粉色房间</figcaption></figure>
+        <figure class="photo-card"><img src="images/beach-day.jpeg" alt="海边的一天"><figcaption>海边的一天</figcaption></figure>
+        <figure class="photo-card"><img src="images/cozy-bed.jpeg" alt="暖暖的睡前时光"><figcaption>暖暖的睡前时光</figcaption></figure>
+        <figure class="photo-card"><img src="images/blue-night.jpeg" alt="蓝色的夜"><figcaption>蓝色的夜</figcaption></figure>
+        <figure class="photo-card"><img src="images/cherry-blossom.jpeg" alt="樱花树下"><figcaption>樱花树下</figcaption></figure>
+        <figure class="photo-card wide"><img src="images/fantasy-friends.jpeg" alt="梦幻伙伴"><figcaption>梦幻伙伴</figcaption></figure>
       </div>
     </section>
 
@@ -62,23 +62,12 @@
           <p class="eyebrow">JOURNAL</p>
           <h2>生活日记</h2>
         </div>
-        <p>把那些以后一定会想起来的瞬间留下。</p>
+        <p>记录那些以后一定会想起来的小瞬间。</p>
       </div>
-
       <article class="journal-card">
         <div class="date">2026 · 09 · 28</div>
         <h3>今天，她第一次说：“我不要！”</h3>
-        <p>
-          今天是一个值得记住的小日子。突然听到这句话的时候，
-          我才发现很多看起来很普通的瞬间，几年后可能都会变得特别珍贵。
-        </p>
-        <p class="note">以后可以继续在这里写更多生活记录。</p>
-      </article>
-
-      <article class="journal-card muted">
-        <div class="date">下一篇</div>
-        <h3>这里留给未来的你</h3>
-        <p>旅行、工作、家庭、想法，甚至只是今天吃了什么，都可以写。</p>
+        <p>今天突然听到这句话的时候，我才发现很多看起来很普通的瞬间，其实都是成长留下来的小小里程碑。</p>
       </article>
     </section>
 
@@ -88,10 +77,7 @@
           <p class="eyebrow">ABOUT</p>
           <h2>关于这个网站</h2>
         </div>
-        <p>
-          这是一个私人数字空间：保存图片、日记、作品和重要回忆。
-          不追求更新频率，也不追求给别人看，首先是留给自己。
-        </p>
+        <p>这是属于我的数字空间。图片、作品、日记、生活和回忆，都可以慢慢留在这里。</p>
       </div>
     </section>
   </main>
