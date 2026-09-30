@@ -1,3 +1,30 @@
+// Content is added to the HTML in publication order (oldest first).
+// Use data-published-at for an explicit publication timestamp when available.
+function sortNewestFirst(container, selector, getPublishedAt) {
+  if (!container) return;
+  const entries = Array.from(container.querySelectorAll(selector)).map((element, index) => {
+    const timestamp = Date.parse(getPublishedAt(element) || '');
+    return { element, index, timestamp };
+  });
+  entries.sort((a, b) => {
+    if (Number.isFinite(a.timestamp) && Number.isFinite(b.timestamp)) {
+      return b.timestamp - a.timestamp || b.index - a.index;
+    }
+    // Undated content follows the existing append-in-publication-order convention.
+    return b.index - a.index;
+  });
+  entries.forEach(({ element }) => container.appendChild(element));
+}
+
+sortNewestFirst(document.querySelector('.gallery-grid'), '.photo-card', card => card.dataset.publishedAt);
+sortNewestFirst(document.querySelector('#journal .inner'), '.journal-card', card => {
+  if (card.dataset.publishedAt) return card.dataset.publishedAt;
+  const date = card.querySelector('.journal-date');
+  if (!date) return '';
+  const parts = date.querySelectorAll('span');
+  return `${parts[0]?.textContent.trim()} ${date.querySelector('strong')?.textContent.trim()}, ${parts[1]?.textContent.trim()}`;
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const galleryImages = Array.from(document.querySelectorAll('.gallery-grid .photo-card img'));
