@@ -86,3 +86,12 @@ a:focus-visible, button:focus-visible, img[role="button"]:focus-visible {
   h1 em { display: inline-block; font-size: 1.18em; margin-top: 8px; }
 }
 .about-card h2 { text-wrap: balance; }
+
+/* Separate family memories and AI artwork. */
+.gallery-empty { padding: 48px 20px; text-align: center; border: 1px dashed rgba(255,255,255,.3); border-radius: 18px; color: var(--muted); }
+.gallery-empty p { margin: 0; font-size: 16px; line-height: 1.8; }
+.gallery-grid:has(.photo-card) + .gallery-empty { display: none; }
+@media (max-width: 640px) {
+  nav { flex-wrap: wrap; justify-content: flex-start; column-gap: 14px; font-size: 14px; }
+  html { scroll-padding-top: 150px; }
+}
