@@ -95,3 +95,10 @@ a:focus-visible, button:focus-visible, img[role="button"]:focus-visible {
   nav { flex-wrap: wrap; justify-content: flex-start; column-gap: 14px; font-size: 14px; }
   html { scroll-padding-top: 150px; }
 }
+
+/* Show complete AI compositions without cropping. */
+#ai-gallery .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+#ai-gallery .photo-card { grid-column: auto; }
+#ai-gallery .photo-card img { height: auto; aspect-ratio: auto; object-fit: contain; }
+#ai-gallery .photo-card:hover img { transform: none; }
+@media (max-width: 640px) { #ai-gallery .gallery-grid { grid-template-columns: 1fr; } }
