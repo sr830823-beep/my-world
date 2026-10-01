@@ -16,7 +16,9 @@ function sortNewestFirst(container, selector, getPublishedAt) {
   entries.forEach(({ element }) => container.appendChild(element));
 }
 
-sortNewestFirst(document.querySelector('.gallery-grid'), '.photo-card', card => card.dataset.publishedAt);
+document.querySelectorAll('.gallery-grid').forEach(grid => {
+  sortNewestFirst(grid, '.photo-card', card => card.dataset.publishedAt);
+});
 sortNewestFirst(document.querySelector('#journal .inner'), '.journal-card', card => {
   if (card.dataset.publishedAt) return card.dataset.publishedAt;
   const date = card.querySelector('.journal-date');
@@ -27,7 +29,8 @@ sortNewestFirst(document.querySelector('#journal .inner'), '.journal-card', card
 
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const galleryImages = Array.from(document.querySelectorAll('.gallery-grid .photo-card img'));
+const allGalleryImages = Array.from(document.querySelectorAll('.gallery-grid .photo-card img'));
+let galleryImages = [];
 let currentImageIndex = 0;
 
 const lightbox = document.createElement('div');
@@ -59,8 +62,9 @@ function showImage(index) {
   lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
 }
 
-function openLightbox(index) {
-  showImage(index);
+function openLightbox(image) {
+  galleryImages = Array.from(image.closest('.gallery-grid').querySelectorAll('.photo-card img'));
+  showImage(galleryImages.indexOf(image));
   lightbox.classList.add('open');
   lightbox.setAttribute('aria-hidden', 'false');
   document.body.classList.add('lightbox-open');
@@ -72,15 +76,15 @@ function closeLightbox() {
   document.body.classList.remove('lightbox-open');
 }
 
-galleryImages.forEach((image, index) => {
+allGalleryImages.forEach((image, index) => {
   image.tabIndex = 0;
   image.setAttribute('role', 'button');
   image.setAttribute('aria-label', `查看大图：${image.alt || index + 1}`);
-  image.addEventListener('click', () => openLightbox(index));
+  image.addEventListener('click', () => openLightbox(image));
   image.addEventListener('keydown', event => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      openLightbox(index);
+      openLightbox(image);
     }
   });
 });
